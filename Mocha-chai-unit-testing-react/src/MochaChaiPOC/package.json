@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "name": "asp.net",
+  "private": true,
+  "devDependencies": {
+    "axios": "0.14.0",
+    "babel-core": "6.14.0",
+    "babel-loader": "6.2.5",
+    "babel-preset-es2015": "6.14.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-1": "6.13.0",
+    "css-loader": "0.25.0",
+    "events": "1.1.1",
+    "file-loader": "0.9.0",
+    "flux": "2.1.1",
+    "font-awesome": "4.6.3",
+    "jquery": "3.1.0",
+    "keymirror": "0.1.1",
+    "react": "15.3.1",
+    "react-custom-scrollbars": "4.0.0",
+    "react-dom": "15.3.1",
+    "style-loader": "0.13.1",
+    "webpack": "^1.13.2",
+    "mixpanel": "0.4.1",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "scripts": {
+    "dev-build": "webpack -d --config webpack.config.js --colors",
+    "dev-watch": "webpack -d --config webpack.config.js --watch --colors",
+    "prod-build": "SET NODE_ENV=production&&webpack -p --config webpack.config.js --colors",
+    "test": "mocha-webpack --webpack-config webpack.config-test.js \"wwwroot/js/test/*.test.jsx\"",
+    "test2": "mocha --compilers js:babel/register --recursive",
+    "testci": "watch 'npm run test' wwwroot/",
+    "dev:hot": "�\"webpack-dev-server --hot --inline --progress --colors --watch --display-error-details --display-cached --content-base ./\""
+  },
+  "dependencies": {
+    "chai": "^3.5.0",
+    "enzyme": "^2.5.1",
+    "jsdom": "^9.8.0",
+    "jsx-chai": "^4.0.0",
+    "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.1.0",
+    "react-addons-test-utils": "^15.0.0",
+    "webpack-node-externals": "^1.5.4"
+  },
+  "-vs-binding": {
+    "BeforeBuild": [
+      "test"
+    ]
+  }
+}

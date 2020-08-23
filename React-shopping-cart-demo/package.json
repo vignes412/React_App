@@ -1,0 +1,31 @@
+{
+  "name": "movie-battle",
+  "version": "1.0.0",
+  "description": "Movie Battle App",
+  "main": "index.js",
+  "scripts": {
+    "prod": "webpack -p",
+    "dev": "webpack-dev-server",
+    "live":"webpack-dev-server --progress --colors"
+  },
+  "author": "hemachandhiran",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "flux": "^2.1.1",
+    "merge": "^1.2.0",
+    "object-assign": "^4.1.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-notify-toast": "^0.1.3",
+    "react-router": "^2.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-react": "^6.11.1",
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.2"
+  }
+}

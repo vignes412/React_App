@@ -1,0 +1,37 @@
+<h4 class="text-center">Personal Detail</h4>
+
+<div class="form-group">
+  <label>Name:</label>
+  <input type="text" class="form-control" [(ngModel)]="personalDetails.firstName" placeholder="First Name" />
+  <input type="text" class="form-control" [(ngModel)]="personalDetails.lastName" placeholder="Last Name" />
+</div>
+<div class="form-group">
+  <label>Age:</label>
+  <input type="number" class="form-control" [(ngModel)]="personalDetails.age" placeholder="Age" />
+</div>
+<div class="form-group">
+  <label>Gender:</label>
+  <div class="radio">
+    <label>
+      <input type="radio" name="gender" id="radioMale" value="Male" [(ngModel)]="personalDetails.gender" checked> Male
+    </label>
+  </div>
+  <div class="radio">
+    <label>
+      <input type="radio" name="gender" id="RadioFemale" value="Female" [(ngModel)]="personalDetails.gender"> Female
+    </label>
+  </div>
+</div>
+<div class="form-group">
+  <label>Permanant Address:</label>
+  <textarea class="form-control" [(ngModel)]="personalDetails.address">
+   </textarea>
+</div>
+<div class="form-group">
+  <label>Martial Status:</label>
+  <select class="form-control" [(ngModel)]="personalDetails.martialStatus">
+    <option value="">------</option>
+    <option value="Single">Single</option>
+    <option value="Married">Married</option>
+  </select>
+</div>

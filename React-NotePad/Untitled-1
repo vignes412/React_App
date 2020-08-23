@@ -1,0 +1,27 @@
+https://mochajs.org/#installation
+
+
+http://www.bebetterdeveloper.com/coding/shallow-rendering-react-mocha.html
+
+
+install mocha-webpack
+
+//webpack.config-test.js
+var nodeExternals = require('webpack-node-externals');
+
+module.exports = {
+    target: 'node', // in order to ignore built-in modules like path, fs, etc.
+    externals: [nodeExternals()], // in order to ignore all modules in node_modules folder
+};
+
+
+//package.json
+//scripts
+
+"test": "mocha-webpack --webpack-config webpack.config-test.js \"wwwroot/**/*.test.jsx\"",
+
+
+
+
+
+https://github.com/zinserjan/mocha-webpack
